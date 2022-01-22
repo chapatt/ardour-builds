@@ -1,0 +1,10 @@
+--- a/tparam.c	2022-01-22 13:08:04.000000000 -0500
++++ b/tparam.c	2022-01-22 13:07:25.000000000 -0500
+@@ -28,6 +28,7 @@
+ #ifdef STDC_HEADERS
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h>
+ #else
+ char *malloc ();
+ char *realloc ();

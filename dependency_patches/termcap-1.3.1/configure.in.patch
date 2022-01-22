@@ -1,0 +1,10 @@
+--- a/configure.in	2022-01-22 13:08:08.000000000 -0500
++++ b/configure.in	2022-01-22 13:07:34.000000000 -0500
+@@ -14,6 +14,7 @@
+ termcapfile=$withval, termcapfile=/etc/termcap)
+ AC_SUBST(termcapfile)dnl
+ 
++AC_HEADER_STDC
+ AC_PROG_CC
+ AC_PROG_RANLIB
+ AC_PROG_INSTALL

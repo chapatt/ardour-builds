@@ -1,0 +1,19 @@
+name: build Ardour for macOS
+on: [push]
+jobs:
+  download-dependency-sources:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download sources
+        run: |
+          mkdir -p dependency_sources
+          cd dependency_sources
+          ../download_dependency_sources.sh
+
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: ./dependency_sources
+          key: dependency_sources

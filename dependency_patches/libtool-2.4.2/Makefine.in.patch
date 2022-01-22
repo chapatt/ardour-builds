@@ -1,0 +1,10 @@
+--- a/Makefile.in	2022-01-21 16:38:08.000000000 -0500
++++ b/Makefile.in	2022-01-21 16:39:23.000000000 -0500
+@@ -637,7 +637,6 @@
+ sub_configure_deps = $(sub_aclocal_m4_deps) $(srcdir)/libltdl/aclocal.m4
+ info_TEXINFOS = doc/libtool.texi
+ doc_libtool_TEXINFOS = doc/PLATFORMS doc/fdl.texi doc/notes.texi
+-dist_man1_MANS = $(srcdir)/doc/libtool.1 $(srcdir)/doc/libtoolize.1
+ update_mans = \
+   PATH=".$(PATH_SEPARATOR)$$PATH"; export PATH; \
+   $(HELP2MAN) --output=$@
