@@ -63,14 +63,6 @@ make
 make install
 popd
 
-# Depends on fftw3
-tar xf ../dependency_sources/aubio-0.3.2.tar.gz
-pushd aubio-0.3.2
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/flac-1.3.2.tar.xz
 pushd flac-1.3.2
 ./configure
@@ -215,16 +207,16 @@ make
 make install
 popd
 
-tar xf ../dependency_sources/libsigc++-2.4.1.tar.xz
-pushd libsigc++-2.4.1
+# Depends on fftw3 and samplerate
+tar xf ../dependency_sources/aubio-0.3.2.tar.gz
+pushd aubio-0.3.2
 ./configure
 make
 make install
 popd
 
-# Depends on cairo and libsigc++-2.0
-tar xf ../dependency_sources/cairomm-1.11.2.tar.gz
-pushd cairomm-1.11.2
+tar xf ../dependency_sources/libsigc++-2.4.1.tar.xz
+pushd libsigc++-2.4.1
 ./configure
 make
 make install
@@ -339,25 +331,9 @@ make
 make install
 popd
 
-# Depends on glib-2.0 atk pango cairo gdk-pixbuf-2.0
-tar xf ../dependency_sources/gtk+-2.24.23.tar.bz2
-pushd gtk+-2.24.23
-./configure --enable-relocation
-make
-make install
-popd
-
 # Depends on intltool >= 0.31.0 and gtk+
 tar xf ../dependency_sources/gtk-engines-2.21.0.tar.gz
 pushd gtk-engines-2.21.0
-./configure
-make
-make install
-popd
-
-# Depends on cairomm
-tar xf ../dependency_sources/pangomm-2.34.0.tar.xz
-pushd pangomm-2.34.0
 ./configure
 make
 make install
@@ -380,6 +356,30 @@ popd
 # Depends on pixman-1
 tar xf ../dependency_sources/cairo-1.14.8.tar.xz
 pushd cairo-1.14.8
+./configure
+make
+make install
+popd
+
+# Depends on cairo and libsigc++-2.0
+tar xf ../dependency_sources/cairomm-1.11.2.tar.gz
+pushd cairomm-1.11.2
+./configure
+make
+make install
+popd
+
+# Depends on glib-2.0, atk, pango, cairo and gdk-pixbuf-2.0
+tar xf ../dependency_sources/gtk+-2.24.23.tar.bz2
+pushd gtk+-2.24.23
+./configure --enable-relocation
+make
+make install
+popd
+
+# Depends on cairomm
+tar xf ../dependency_sources/pangomm-2.34.0.tar.xz
+pushd pangomm-2.34.0
 ./configure
 make
 make install
