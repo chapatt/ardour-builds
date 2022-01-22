@@ -201,7 +201,7 @@ popd
 
 tar xf ../dependency_sources/libsamplerate-0.1.9.tar.gz
 pushd libsamplerate-0.1.9
-patch -u examples/audio_out.c -i ../../patches/libsamplerate-0.1.9/examples/audio_out.c.patch
+patch -u examples/audio_out.c -i ../../dependency_patches/libsamplerate-0.1.9/examples/audio_out.c.patch
 ./configure
 make
 make install
@@ -248,7 +248,7 @@ popd
 tar xf ../dependency_sources/libtool-2.4.2.tar.gz
 pushd libtool-2.4.2
 ./bootstrap
-patch -u Makefile.in -i ../../patches/libtool-2.4.2/Makefile.in.patch
+patch -u Makefile.in -i ../../dependency_patches/libtool-2.4.2/Makefile.in.patch
 ./configure
 make
 make install
@@ -476,8 +476,8 @@ popd
 
 tar xf ../dependency_sources/termcap-1.3.1.tar.gz
 pushd termcap-1.3.1
-patch -u configure.in -i ../../patches/termcap-1.3.1/configure.in.patch
-patch -u tparam.c -i ../../patches/termcap-1.3.1/tparam.c.patch
+patch -u configure.in -i ../../dependency_patches/termcap-1.3.1/configure.in.patch
+patch -u tparam.c -i ../../dependency_patches/termcap-1.3.1/tparam.c.patch
 ./configure
 make
 make install
