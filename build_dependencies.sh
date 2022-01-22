@@ -35,13 +35,6 @@ popd
 # pushd boost_1_68_0
 # popd
 
-tar xf ../dependency_sources/cairo-1.14.8.tar.xz
-pushd cairo-1.14.8
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/cppunit-1.13.2.tar.gz
 pushd cppunit-1.13.2
 ./configure
@@ -379,6 +372,14 @@ popd
 
 tar xf ../dependency_sources/pixman-0.38.4.tar.gz
 pushd pixman-0.38.4
+./configure
+make
+make install
+popd
+
+# Depends on pixman-1
+tar xf ../dependency_sources/cairo-1.14.8.tar.xz
+pushd cairo-1.14.8
 ./configure
 make
 make install
