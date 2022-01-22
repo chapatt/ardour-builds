@@ -17,3 +17,20 @@ jobs:
           mkdir -p dependency_sources
           cd dependency_sources
           ../download_dependency_sources.sh
+
+  build-dependencies:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Retrieve source cache
+        uses: actions/cache@v2
+        with:
+          path: ./dependency_sources
+          key: dependency_sources
+
+      - name: Build dependencies
+        run: |
+          mkdir -p build_dependencies
+          cd build_dependencies
+          ../build_dependencies.sh
