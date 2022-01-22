@@ -24,13 +24,6 @@ popd
 # make install
 # popd
 
-tar xf ../dependency_sources/atk-2.14.0.tar.xz
-pushd atk-2.14.0
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/bison-3.1.tar.xz
 pushd bison-3.1
 ./configure
@@ -113,14 +106,6 @@ make
 make install
 popd
 
-# Depends on glib
-tar xf ../dependency_sources/gdk-pixbuf-2.31.1.tar.xz
-pushd gdk-pixbuf-2.31.1
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/gettext-0.19.3.tar.gz
 pushd gettext-0.19.3
 ./configure --disable-java --disable-native-java
@@ -181,6 +166,22 @@ popd
 tar xf ../dependency_sources/glib-2.42.0.tar.xz
 pushd glib-2.42.0
 ./configure --enable-static --enable-shared
+make
+make install
+popd
+
+# Depends on glib
+tar xf ../dependency_sources/atk-2.14.0.tar.xz
+pushd atk-2.14.0
+./configure
+make
+make install
+popd
+
+# Depends on glib
+tar xf ../dependency_sources/gdk-pixbuf-2.31.1.tar.xz
+pushd gdk-pixbuf-2.31.1
+./configure
 make
 make install
 popd
