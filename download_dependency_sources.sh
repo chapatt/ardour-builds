@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+set -x
+
 wget -nc http://ftp.gnome.org/pub/GNOME/sources/atk/2.14/atk-2.14.0.tar.xz
 
 wget -nc http://ftp.gnome.org/pub/GNOME/sources/atkmm/2.22/atkmm-2.22.7.tar.xz

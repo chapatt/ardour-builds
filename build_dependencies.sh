@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 set -e
+set -x
 
 tar xf ../dependency_sources/autoconf-2.69.tar.xz
 pushd autoconf-2.69
