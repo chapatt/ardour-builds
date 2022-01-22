@@ -12,7 +12,7 @@ jobs:
           cd dependency_sources
           ../download_dependency_sources.sh
 
-      - name: Cache multiple paths
+      - name: Cache sources
         uses: actions/cache@v2
         with:
           path: ./dependency_sources
