@@ -19,6 +19,7 @@ jobs:
           ../download_dependency_sources.sh
 
   build-dependencies:
+    needs: download-dependency-sources
     runs-on: macos-11.0
     steps:
       - uses: actions/checkout@v2
