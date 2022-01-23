@@ -5,6 +5,8 @@ set -x
 
 cpan XML::Parser
 
+brew install python@2
+
 tar xf ../dependency_sources/autoconf-2.69.tar.xz
 pushd autoconf-2.69
 #./configure
