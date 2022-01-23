@@ -7,15 +7,15 @@ cpan XML::Parser
 
 tar xf ../dependency_sources/autoconf-2.69.tar.xz
 pushd autoconf-2.69
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/automake-1.14.1.tar.gz
 pushd automake-1.14.1
-./configure
-make
+#./configure
+#make
 make install
 popd
 
@@ -28,8 +28,8 @@ popd
 
 tar xf ../dependency_sources/bison-3.1.tar.xz
 pushd bison-3.1
-./configure
-make
+#./configure
+#make
 make install
 popd
 
@@ -39,175 +39,175 @@ popd
 
 tar xf ../dependency_sources/cppunit-1.13.2.tar.gz
 pushd cppunit-1.13.2
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/curl-7.66.0.tar.xz
 pushd curl-7.66.0
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/expat-2.1.0.tar.gz
 pushd expat-2.1.0
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/fftw-3.3.8.tar.gz
 pushd fftw-3.3.8
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/flac-1.3.2.tar.xz
 pushd flac-1.3.2
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/flex-2.6.4.tar.gz
 pushd flex-2.6.4
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
 pushd fontconfig-2.13.1
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/freetype-2.9.tar.gz
 pushd freetype-2.9
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/gettext-0.19.3.tar.gz
 pushd gettext-0.19.3
-./configure --disable-java --disable-native-java
-make
+#./configure --disable-java --disable-native-java
+#make
 make install
 popd
 
 tar xf ../dependency_sources/gnome-common-2.34.0.tar.bz2
 pushd gnome-common-2.34.0
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/harfbuzz-0.9.35.tar.bz2
 pushd harfbuzz-0.9.35
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 # Depends on perl XML::Parser
 tar xf ../dependency_sources/intltool-0.50.2.tar.gz
 pushd intltool-0.50.2
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/jpeg-9a.tar.gz
 pushd jpeg-9a
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/libarchive-3.2.1.tar.gz
 pushd libarchive-3.2.1
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/libffi-3.1.tar.gz
 pushd libffi-3.1
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 # Depends on libffi
 tar xf ../dependency_sources/glib-2.42.0.tar.xz
 pushd glib-2.42.0
-./configure --enable-static --enable-shared
-make
+#./configure --enable-static --enable-shared
+#make
 make install
 popd
 
 # Depends on glib
 tar xf ../dependency_sources/atk-2.14.0.tar.xz
 pushd atk-2.14.0
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 # Depends on glib
 tar xf ../dependency_sources/gdk-pixbuf-2.31.1.tar.xz
 pushd gdk-pixbuf-2.31.1
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 # Depends on glib
 tar xf ../dependency_sources/gobject-introspection-1.38.0.tar.xz
 pushd gobject-introspection-1.38.0
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/libiconv-1.14.tar.gz
 pushd libiconv-1.14
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/liblo-0.28.tar.gz
 pushd liblo-0.28
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/libogg-1.3.2.tar.xz
 pushd libogg-1.3.2
 ./configure
-make
-make install
+#make
+#make install
 popd
 
 tar xf ../dependency_sources/libpng-1.6.37.tar.xz
 pushd libpng-1.6.37
-./configure
-make
+#./configure
+#make
 make install
 popd
 
 tar xf ../dependency_sources/libsamplerate-0.1.9.tar.gz
 pushd libsamplerate-0.1.9
-patch -u examples/audio_out.c -i ../../dependency_patches/libsamplerate-0.1.9/examples/audio_out.c.patch
-./configure
-make
+#patch -u examples/audio_out.c -i ../../dependency_patches/libsamplerate-0.1.9/examples/audio_out.c.patch
+#./configure
+#make
 make install
 popd
 
