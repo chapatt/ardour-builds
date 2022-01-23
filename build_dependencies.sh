@@ -105,13 +105,6 @@ make
 make install
 popd
 
-tar xf ../dependency_sources/gobject-introspection-1.38.0.tar.xz
-pushd gobject-introspection-1.38.0
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/harfbuzz-0.9.35.tar.bz2
 pushd harfbuzz-0.9.35
 ./configure
@@ -166,6 +159,14 @@ popd
 # Depends on glib
 tar xf ../dependency_sources/gdk-pixbuf-2.31.1.tar.xz
 pushd gdk-pixbuf-2.31.1
+./configure
+make
+make install
+popd
+
+# Depends on glib
+tar xf ../dependency_sources/gobject-introspection-1.38.0.tar.xz
+pushd gobject-introspection-1.38.0
 ./configure
 make
 make install
