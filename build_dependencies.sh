@@ -3,6 +3,8 @@
 set -e
 set -x
 
+cpan XML::Parser
+
 tar xf ../dependency_sources/autoconf-2.69.tar.xz
 pushd autoconf-2.69
 ./configure
@@ -112,6 +114,7 @@ make
 make install
 popd
 
+# Depends on perl XML::Parser
 tar xf ../dependency_sources/intltool-0.50.2.tar.gz
 pushd intltool-0.50.2
 ./configure
