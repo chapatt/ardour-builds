@@ -241,14 +241,6 @@ make
 make install
 popd
 
-# Depends on fftw3, libsndfile and libsamplerate
-tar xf ../dependency_sources/aubio-0.3.2.tar.gz
-pushd aubio-0.3.2
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/libtool-2.4.2.tar.gz
 pushd libtool-2.4.2
 ./bootstrap
@@ -559,6 +551,14 @@ tar xf ../dependency_sources/gtkmm-2.24.4.tar.xz
 pushd gtkmm-2.24.4
 ./configure
 make
+make install
+popd
+
+# Depends on fftw3, libsndfile and libsamplerate
+tar xf ../dependency_sources/aubio-0.3.2.tar.gz
+pushd aubio-0.3.2
+./configure
+make -j1
 make install
 popd
 
