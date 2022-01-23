@@ -213,14 +213,6 @@ pushd libsamplerate-0.1.9
 make install
 popd
 
-# Depends on fftw3 and samplerate
-tar xf ../dependency_sources/aubio-0.3.2.tar.gz
-pushd aubio-0.3.2
-./configure
-make
-make install
-popd
-
 tar xf ../dependency_sources/libsigc++-2.4.1.tar.xz
 pushd libsigc++-2.4.1
 ./configure
@@ -246,6 +238,14 @@ popd
 
 tar xf ../dependency_sources/libsndfile-1.0.27.tar.gz
 pushd libsndfile-1.0.27
+./configure
+make
+make install
+popd
+
+# Depends on fftw3, libsndfile and libsamplerate
+tar xf ../dependency_sources/aubio-0.3.2.tar.gz
+pushd aubio-0.3.2
 ./configure
 make
 make install
