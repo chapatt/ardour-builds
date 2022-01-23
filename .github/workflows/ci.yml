@@ -30,6 +30,12 @@ jobs:
           path: ./dependency_sources
           key: dependency_sources
 
+      - name: Cache dependency builds
+        uses: actions/cache@v2
+        with:
+          path: ./build_dependencies
+          key: build_dependencies
+
       - name: Build dependencies
         run: |
           mkdir -p build_dependencies
