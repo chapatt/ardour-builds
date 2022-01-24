@@ -107,13 +107,6 @@ make
 sudo make install
 popd
 
-tar xf ../dependency_sources/harfbuzz-0.9.35.tar.bz2
-pushd harfbuzz-0.9.35
-./configure
-make
-sudo make install
-popd
-
 # Depends on perl XML::Parser
 tar xf ../dependency_sources/intltool-0.50.2.tar.gz
 pushd intltool-0.50.2
@@ -154,6 +147,14 @@ popd
 # Depends on glib
 tar xf ../dependency_sources/atk-2.14.0.tar.xz
 pushd atk-2.14.0
+./configure
+make
+sudo make install
+popd
+
+# Depends on glib
+tar xf ../dependency_sources/harfbuzz-0.9.35.tar.bz2
+pushd harfbuzz-0.9.35
 ./configure
 make
 sudo make install
