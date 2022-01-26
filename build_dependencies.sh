@@ -299,14 +299,6 @@ popd
 # pushd nss-3.45
 # popd
 
-# Depends on intltool >= 0.31.0 and gtk+
-tar xf ../dependency_sources/gtk-engines-2.21.0.tar.gz
-pushd gtk-engines-2.21.0
-./configure
-make
-sudo make install
-popd
-
 tar xf ../dependency_sources/pcre-8.36.tar.bz2
 pushd pcre-8.36
 ./configure
@@ -372,6 +364,14 @@ popd
 # Depends on freetype
 tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
 pushd fontconfig-2.13.1
+./configure
+make
+sudo make install
+popd
+
+# Depends on intltool >= 0.31.0 and gtk+
+tar xf ../dependency_sources/gtk-engines-2.21.0.tar.gz
+pushd gtk-engines-2.21.0
 ./configure
 make
 sudo make install
