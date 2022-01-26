@@ -79,20 +79,6 @@ make
 sudo make install
 popd
 
-tar xf ../dependency_sources/freetype-2.9.tar.gz
-pushd freetype-2.9
-./configure
-make
-sudo make install
-popd
-
-tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
-pushd fontconfig-2.13.1
-./configure
-make
-sudo make install
-popd
-
 tar xf ../dependency_sources/gettext-0.19.3.tar.gz
 pushd gettext-0.19.3
 ./configure --disable-java --disable-native-java
@@ -155,6 +141,22 @@ popd
 # Depends on glib
 tar xf ../dependency_sources/harfbuzz-0.9.35.tar.bz2
 pushd harfbuzz-0.9.35
+./configure
+make
+sudo make install
+popd
+
+# Depends on harfbuzz
+tar xf ../dependency_sources/freetype-2.9.tar.gz
+pushd freetype-2.9
+./configure
+make
+sudo make install
+popd
+
+# Depends on freetype
+tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
+pushd fontconfig-2.13.1
 ./configure
 make
 sudo make install
