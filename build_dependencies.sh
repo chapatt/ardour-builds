@@ -329,14 +329,6 @@ make
 sudo make install
 popd
 
-# Depends on glib-2.0, atk, pango, cairo and gdk-pixbuf-2.0
-tar xf ../dependency_sources/gtk+-2.24.23.tar.bz2
-pushd gtk+-2.24.23
-./configure --enable-relocation
-make
-sudo make install
-popd
-
 # Bootstrap without harfbuzz support
 tar xf ../dependency_sources/freetype-2.9.tar.gz
 pushd freetype-2.9
@@ -381,6 +373,14 @@ popd
 tar xf ../dependency_sources/pango-1.40.4.tar.xz
 pushd pango-1.40.4
 ./configure
+make
+sudo make install
+popd
+
+# Depends on glib-2.0, atk, pango, cairo and gdk-pixbuf-2.0
+tar xf ../dependency_sources/gtk+-2.24.23.tar.bz2
+pushd gtk+-2.24.23
+./configure --enable-relocation
 make
 sudo make install
 popd
