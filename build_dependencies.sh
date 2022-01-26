@@ -299,13 +299,6 @@ popd
 # pushd nss-3.45
 # popd
 
-tar xf ../dependency_sources/pango-1.40.4.tar.xz
-pushd pango-1.40.4
-./configure
-make
-sudo make install
-popd
-
 # Depends on intltool >= 0.31.0 and gtk+
 tar xf ../dependency_sources/gtk-engines-2.21.0.tar.gz
 pushd gtk-engines-2.21.0
@@ -379,6 +372,14 @@ popd
 # Depends on freetype
 tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
 pushd fontconfig-2.13.1
+./configure
+make
+sudo make install
+popd
+
+# Depends on harfbuzz and cairo
+tar xf ../dependency_sources/pango-1.40.4.tar.xz
+pushd pango-1.40.4
 ./configure
 make
 sudo make install
