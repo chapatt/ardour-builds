@@ -79,15 +79,15 @@ make
 sudo make install
 popd
 
-tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
-pushd fontconfig-2.13.1
+tar xf ../dependency_sources/freetype-2.9.tar.gz
+pushd freetype-2.9
 ./configure
 make
 sudo make install
 popd
 
-tar xf ../dependency_sources/freetype-2.9.tar.gz
-pushd freetype-2.9
+tar xf ../dependency_sources/fontconfig-2.13.1.tar.bz2
+pushd fontconfig-2.13.1
 ./configure
 make
 sudo make install
