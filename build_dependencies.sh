@@ -138,6 +138,14 @@ make
 sudo make install
 popd
 
+# Bootstrap without harfbuzz support
+tar xf ../dependency_sources/freetype-2.9.tar.gz
+pushd freetype-2.9
+./configure
+make
+sudo make install
+popd
+
 # Depends on glib
 tar xf ../dependency_sources/harfbuzz-0.9.35.tar.bz2
 pushd harfbuzz-0.9.35
@@ -146,9 +154,9 @@ make
 sudo make install
 popd
 
-# Depends on harfbuzz
-tar xf ../dependency_sources/freetype-2.9.tar.gz
+# Reinstall with harfbuzz
 pushd freetype-2.9
+sudo make uninstall
 ./configure
 make
 sudo make install
