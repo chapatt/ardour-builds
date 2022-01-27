@@ -347,7 +347,6 @@ popd
 
 # Reinstall with harfbuzz
 pushd freetype-2.9
-sudo make uninstall
 ./configure
 make
 sudo make install
